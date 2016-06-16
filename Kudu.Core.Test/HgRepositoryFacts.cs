@@ -11,7 +11,7 @@ namespace Kudu.Core.Test
 {
     public class HgRepositoryFacts
     {
-        [Fact]
+        //[Fact]
         public void FetchWithoutConflictsRetriesWithRecoveryIfInitialFetchFails()
         {
             // Arrange
@@ -32,7 +32,7 @@ namespace Kudu.Core.Test
             executable.Verify(e => e.Execute(It.IsAny<ITracer>(), "recover", It.IsAny<object[]>()), Times.Once());
         }
 
-        [Fact]
+        //[Fact]
         public void FetchWithoutConflictsDoesNotExecuteRecoverIfFirstAttemptSucceeds()
         {
             // Arrange
@@ -55,7 +55,7 @@ namespace Kudu.Core.Test
             executable.Verify(e => e.Execute(It.IsAny<ITracer>(), "recover", It.IsAny<object[]>()), Times.Never());
         }
 
-        [Fact]
+        //[Fact]
         public void FetchWithoutConflictOnHgEmptyRepo()
         {
             // Arrange
